@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    COLORS
+\*------------------------------------*/
+// PRIMARY
+$green: #00A770;
+$gray: #5C6670;
+// SECONDARY
+$lightgreen: #2CB56F;
+$lightergreen: #00C262;
+$lightestgreen: #00D362;
+$lightgray: #C4CED8;
+$blue: #89DDD3;
+
+@mixin transition($transition...) {
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@import url("https://use.typekit.net/eut2ona.css");
+/*------------------------------------*\
+    font-family: "adelle-sans",sans-serif;
+    font-family: "quatro",sans-serif;
+\*------------------------------------*/
+
+body{
+	font-family: "adelle-sans",sans-serif;
+}
+
+h1{
+	font-family: "quatro",sans-serif;
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 64px;
+	text-transform: uppercase;
+	margin: 0px;
+}
+h2{
+	font-family: "quatro",sans-serif;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 44px;
+	text-transform: uppercase;
+}
+h3{
+	font-family: "quatro",sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 40px;
+}
+h4{
+	font-family: "quatro",sans-serif;
+	font-weight: 600;
+	font-size: 1.4em;
+}
+p{
+	font-family: "adelle-sans",sans-serif;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 28px;
+	color: $gray;
+}
+p.two{
+	font-family: "adelle-sans",sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: $gray;
+}
+p.three{
+	font-family: "adelle-sans",sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: $gray;
+}
+p.four{
+	font-family: "adelle-sans",sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: $gray;
+}
+a{
+	color: $gray;
+	border-bottom: $lightestgreen;
+	h1, h2, h3, h4, h5, h6, p, li{
+		a{
+			color: $gray;
+			border-bottom: $lightestgreen;
+		}
+	}
+}
+p a{
+	font-weight: 600;
+	color: $gray;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	&:after {
+	    display: block;
+	    position: absolute;
+	    border-bottom: solid 3px $lightestgreen;
+	    content: '';
+	    bottom: -1px;
+	    width: 100%;
+	    z-index: -1;
+	    -webkit-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+	}
+	&:hover{
+		color: black;
+		&:after {
+		    display: block;
+		    position: absolute;
+		    border-bottom: solid 14px $lightestgreen;
+		    content: '';
+		    bottom: 0px;
+		    width: 100%;
+		}
+	}
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
