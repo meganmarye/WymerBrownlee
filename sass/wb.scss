@@ -36,7 +36,6 @@ h1{
 	font-weight: 600;
 	font-size: 60px;
 	line-height: 64px;
-	text-transform: uppercase;
 	margin: 0px;
 }
 h2{
@@ -44,7 +43,6 @@ h2{
 	font-weight: 600;
 	font-size: 40px;
 	line-height: 44px;
-	text-transform: uppercase;
 }
 h3{
 	font-family: "quatro",sans-serif;
@@ -88,6 +86,7 @@ p.four{
 a{
 	color: $gray;
 	border-bottom: $lightestgreen;
+	font-weight: 400;
 	h1, h2, h3, h4, h5, h6, p, li{
 		a{
 			color: $gray;
@@ -115,14 +114,158 @@ p a{
         transition: all 200ms ease-in-out;
 	}
 	&:hover{
-		color: black;
+		color: $gray;
 		&:after {
 		    display: block;
 		    position: absolute;
 		    border-bottom: solid 14px $lightestgreen;
 		    content: '';
-		    bottom: 0px;
+		    bottom: -4px;
 		    width: 100%;
+		}
+	}
+}
+a.icon{
+	background-color: $green;
+	border-radius: 100%;
+	padding: 5px;
+}
+
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+.header{
+	background-color: $gray;
+	padding: 10px 40px;
+	.logo{
+		display: inline-block;
+	    vertical-align: middle;
+		.logo-img {
+		    height: 80px;
+		    width: 140px;
+		}
+	}
+	.rightnav{
+		display: inline-block;
+	    vertical-align: middle;
+		width: 85%;
+		width: calc(100% - 143px);
+		padding-left: 40px;
+		.header-menu{
+			vertical-align: middle;
+			text-align: right;
+			a#trigger-overlay{
+				margin-right: 40px;
+				list-style: none;
+				font-family: "quatro",sans-serif;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 18px;
+				display: inline-block;
+				color: $lightgray;
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+				cursor: pointer;
+				&:hover{
+					&:after {
+					    display: block;
+					    position: absolute;
+					    border-bottom: solid 10px $blue;
+					    content: '';
+					    bottom: -20px;
+					    width: 100%;
+					}
+				}
+			}
+			a.social{
+				display: inline-block;
+				background-color: $green;
+				color: white;
+				margin: 0px 10px;
+				border-radius: 100%;
+				padding: 5px;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				//line-height: 30px;
+				svg{
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+.overlay{
+	background: $lightgray;
+	.overlay-topbar{
+		background-color: $gray;
+		padding: 10px 40px;
+		.logo{
+			display: inline-block;
+		    vertical-align: middle;
+			.logo-img {
+			    height: 80px;
+			    width: 140px;
+			}
+		}
+		.overlay-close{
+			right: 40px;
+			top: 10px;
+		}
+	}
+	.nav{
+		ul{
+			li{
+				display: block;
+			    height: 20%;
+			    height: calc(100% / 5);
+			    min-height: 54px;
+		        float: left;
+	            clear: both;
+	            &.submenuopen{
+		            height: auto;
+	            }
+			    a{
+				    color: $gray;
+				    position: relative;
+				    display: inline-block;
+			        margin-bottom: 30px;
+					&:hover{
+						&:after {
+						    display: block;
+						    position: absolute;
+						    border-bottom: solid 10px $lightestgreen;
+						    content: '';
+						    bottom: -10px;
+						    width: 100%;
+						}
+					}
+			    }
+				ul.sub-menu {
+					clear: both;
+				    overflow: auto;
+					li{
+						font-size: 34px;
+						margin-bottom: 10px;
+						a{
+							color: $gray;
+							position: relative;
+							display: inline-block;
+							&:hover{
+								&:after {
+								    display: block;
+								    position: absolute;
+								    border-bottom: solid 10px $blue;
+								    content: '';
+								    bottom: -10px;
+								    width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
